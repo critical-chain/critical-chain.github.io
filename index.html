@@ -3,26 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My Angular 2 App</title>
-  <base href="/">
+  <title>My Angular2 App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/css/bootstrap.css?v=0.0.0">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/app/assets/main.css">
   <!-- endinject -->
 </head>
 <body>
 
   <app>Loading...</app>
 
-  <!-- inject:js -->
-  <script src="/lib/es6-shim.min.js?v=0.0.0"></script>
-  <script src="/lib/Reflect.js?v=0.0.0"></script>
-  <script src="/lib/system.src.js?v=0.0.0"></script>
-  <script src="/lib/system.config.js?v=0.0.0"></script>
-  <script src="/lib/angular2.dev.js?v=0.0.0"></script>
-  <script src="/lib/router.dev.js?v=0.0.0"></script>
-  <script src="/lib/http.dev.js?v=0.0.0"></script>
+  <!-- shims:js -->
+  <script src="/node_modules/es6-shim/es6-shim.js"></script>
+  <script src="/node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="/node_modules/systemjs/dist/system.src.js"></script>
+  <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <!-- endinject -->
+
+  <script>System.config({"defaultJSExtensions":true,"paths":{"bootstrap":"/dist/dev/bootstrap","hot_loader_bootstrap":"/dist/dev/hot_loader_bootstrap","*":"/node_modules/*"}})</script>
+
+  <!-- libs:js -->
+  <script src="/node_modules/rxjs/bundles/Rx.min.js"></script>
+  <script src="/node_modules/angular2/bundles/angular2.js"></script>
+  <script src="/node_modules/angular2/bundles/router.js"></script>
+  <script src="/node_modules/angular2/bundles/http.min.js"></script>
   <!-- endinject -->
 
   <script>
@@ -32,6 +38,9 @@
           'Report this error at https://github.com/mgechev/angular2-seed/issues');
       });
   </script>
+
+  <!-- inject:js -->
+  <!-- endinject -->
 
 </body>
 </html>
