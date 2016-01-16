@@ -7,8 +7,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- inject:css -->
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/app/assets/main.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   <!-- endinject -->
 </head>
 <body>
@@ -16,19 +16,19 @@
   <app>Loading...</app>
 
   <!-- shims:js -->
-  <script src="/node_modules/es6-shim/es6-shim.js"></script>
-  <script src="/node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="/node_modules/systemjs/dist/system.src.js"></script>
-  <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="/lib/es6-shim.js"></script>
+  <script src="/lib/Reflect.js"></script>
+  <script src="/lib/system.src.js"></script>
+  <script src="/lib/angular2-polyfills.js"></script>
   <!-- endinject -->
 
-  <script>System.config({"defaultJSExtensions":true,"paths":{"bootstrap":"/dist/dev/bootstrap","hot_loader_bootstrap":"/dist/dev/hot_loader_bootstrap","*":"/node_modules/*"}})</script>
+  <script>System.config({"defaultJSExtensions":true,"bundles":{"bundles/app":["bootstrap"]}})</script>
 
   <!-- libs:js -->
-  <script src="/node_modules/rxjs/bundles/Rx.min.js"></script>
-  <script src="/node_modules/angular2/bundles/angular2.js"></script>
-  <script src="/node_modules/angular2/bundles/router.js"></script>
-  <script src="/node_modules/angular2/bundles/http.min.js"></script>
+  <script src="/lib/Rx.min.js"></script>
+  <script src="/lib/angular2.js"></script>
+  <script src="/lib/router.js"></script>
+  <script src="/lib/http.min.js"></script>
   <!-- endinject -->
 
   <script>
